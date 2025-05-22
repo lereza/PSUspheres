@@ -1,5 +1,5 @@
-from django.core.management.base import BaseCommand
-from faker import Faker
+from django.core.management.base import BaseCommand # type: ignore
+from faker import Faker # type: ignore
 from studentorg.models import College, Program, Organization, Student, OrgMember
 
 class Command(BaseCommand):
@@ -50,4 +50,4 @@ class Command(BaseCommand):
                     start_date="-2y", end_date="today")
                 )
         self.stdout.write(self.style.SUCCESS(
-            'Initial data for student organzation created successfully'))
+            'Initial data for student organization created successfully'))
